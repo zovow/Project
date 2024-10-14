@@ -27,36 +27,14 @@ Page({
         sortid: 2,
         text:"闲置交易"
       },{
-        icon: "../../assets/images/sort/love-mood.png",
-        sortid: 3,
-        text:"表白交友"
-      },{
-        icon: "../../assets/images/sort/question-ask.png",
-        sortid: 4,
-        text:"疑问互答"
-      },{
         icon: "../../assets/images/sort/part-time-job.png",
-        sortid: 5,
-        text:"任务兼职"
-      },{
-        icon: "../../assets/images/sort/study.png",
-        sortid: 6,
-        text:"相约学习"
+        sortid: 3,
+        text:"任务悬赏"
       },{
         icon: "../../assets/images/sort/found.png",
-        sortid: 7,
+        sortid: 4,
         text:"失物招领"
-      },{
-        icon: "../../assets/images/sort/other.png",
-        sortid: 8,
-        text:"趣事分享"
       },
-    ],
-    testImage:[
-      'https://fishei.cn/static/pic/404.jpg',
-      'https://fishei.cn/static/pic/500.jpg',
-      'https://fishei.cn/static/pic/404.jpg',
-      'https://fishei.cn/static/pic/500.jpg',
     ]
   },
 

@@ -1,7 +1,7 @@
 <!--pages/index/index.wxml-->
 <view class="nav-wrap" style="height: {{navH*2+20}}px;">
     <!-- 自定义导航栏 -->
-    <view class="nav-title" style="line-height: {{navH*2+44}}px;">浙农林社区</view>
+    <view class="nav-title" style="line-height: {{navH*2+44}}px;">暂定</view>
     <view style="display: flex; justify-content: space-around;flex-direction: column;height:100%;">
         <navigator hoverClass="none" url="/pages/serach/search">
             <view class="nav-capsule">
@@ -14,7 +14,7 @@
 </view>
 
 <view style="margin-top:{{navH*4+50}}rpx">
-    <!-- 轮播图 -->
+    <!-- 轮播图 图片要修改 -->
     <view class="bbs-swiper-container">
         <swiper class="bbs-swiper" autoplay="true" circular="true" 
             interval="3000" easing-function="easeOutCubic" 
@@ -72,7 +72,7 @@
 
     <!-- 分类具体的内容 -->
     <view class="sort-content">
-        <block wx:for="{{5}}" wx:key="index" > 
+        <block wx:for="{{1}}" wx:key="index" > 
             <view class="sort-content-item">
                 <view class="sort-content-top" >
                     <!-- 用户信息（头像、用户名等） -->
