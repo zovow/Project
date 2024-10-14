@@ -29,7 +29,7 @@ Page({
       },{
         icon: "../../assets/images/sort/part-time-job.png",
         sortid: 3,
-        text:"任务悬赏"
+        text:"悬赏猎人"
       },{
         icon: "../../assets/images/sort/found.png",
         sortid: 4,
