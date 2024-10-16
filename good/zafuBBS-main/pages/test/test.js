@@ -1,7 +1,9 @@
 // test.js
 Page({
   data: {
-    inputText: '' // 输入框中的文本
+    inputText: '', // 输入框中的文本
+    navH: 0,       // 导航栏高度
+
   },
 
   // 处理输入框变化
