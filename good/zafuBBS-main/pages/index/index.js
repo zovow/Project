@@ -19,19 +19,23 @@ Page({
       {
         icon: "../../assets/images/sort/news.png",
         sortid: 1,
-        text:"最新发布"
+        text:"最新发布",
+        url: "/pages/try/try"
       },{
         icon: "../../assets/images/sort/second-hand.png",
         sortid: 2,
-        text:"闲置交易"
+        text:"闲置交易",
+        url: "/pages/test/test"
       },{
         icon: "../../assets/images/sort/part-time-job.png",
         sortid: 3,
-        text:"悬赏猎人"
+        text:"悬赏猎人",
+        url: "/pages/test/test"
       },{
         icon: "../../assets/images/sort/found.png",
         sortid: 4,
-        text:"失物招领"
+        text:"失物招领",
+        url: "/pages/test/test"
       },
     ],
     publishedTexts: [] // 用于存储在home页面显示的文本数组
@@ -105,5 +109,24 @@ Page({
         swiperCurrent: e.detail.current
       })
     }
+  },
+
+  // 添加新的点击处理函数
+  onSortItemClick: function() {
+    console.log('尝试切换到 test 页面');
+    wx.switchTab({
+      url: '/pages/test/test',
+      success: function() {
+        console.log('切换成功');
+      },
+      fail: function(err) {
+        console.error('页面切换失败:', err);
+        wx.showToast({
+          title: '页面切换失败: ' + err.errMsg,
+          icon: 'none',
+          duration: 2000
+        });
+      }
+    });
   },
 })

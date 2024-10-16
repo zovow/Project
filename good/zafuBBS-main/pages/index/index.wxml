@@ -60,7 +60,7 @@
 
         <!-- 分类标签 -->
         <scroll-view scroll-x class="sort-nav" scroll-with-animation enable-flex="true">
-            <view class="sort-nav-item" wx:for="{{sortList}}"  wx:key="index">
+            <view class="sort-nav-item" wx:for="{{sortList}}" wx:key="index" bindtap="onSortItemClick">
                 <image class="sort-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
                 <text class="sort-nav-text">{{item.text}}</text>
             </view>
@@ -130,7 +130,6 @@
 
 
 </view>
-
 
 
 

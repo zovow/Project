@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/try/try",
     "pages/serach/search",
     "pages/me/me",
     "pages/square/square",

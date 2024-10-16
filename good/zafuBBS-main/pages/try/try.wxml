@@ -1,0 +1,5 @@
+<view class="container">
+  <text class="message">{{message}}</text>
+  <button bindtap="goBack">返回首页</button>
+</view>
+
