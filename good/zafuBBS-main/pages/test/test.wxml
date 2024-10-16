@@ -1,0 +1,4 @@
+<view class="container">
+  <input type="text" placeholder="请输入文本" bindinput="handleInputChange" class="input-box" value="{{inputText}}"/>
+  <button bindtap="handlePublish" class="publish-button">发布</button>
+</view>

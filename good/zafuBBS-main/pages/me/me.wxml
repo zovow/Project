@@ -103,11 +103,7 @@
             <image src="../../assets/images/common/next.png"></image>
         </view>
         <view class="me-about">
-            <text>考试刷题</text>
-            <image src="../../assets/images/common/next.png"></image>
-        </view>
-        <view class="me-about">
-            <text>农林悄话</text>
+            <text>收藏商品</text>
             <image src="../../assets/images/common/next.png"></image>
         </view>
         <view class="me-about">

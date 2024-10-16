@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="content">
+    <block wx:for="{{publishedTexts}}" wx:key="index">
+      <text>{{item}}</text>
+      <view class="separator"></view>
+    </block>
+  </view>
+</view>

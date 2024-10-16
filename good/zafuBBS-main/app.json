@@ -7,7 +7,9 @@
     "pages/message/message",
     "pages/send/send",
     "pages/article/article",
-    "pages/article-detail/article-detail"
+    "pages/article-detail/article-detail",
+    "pages/home/home",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,6 +39,18 @@
       {
         "pagePath": "pages/me/me",
         "text": "我的",
+        "iconPath": "assets/images/tabbar/my_second.png",
+        "selectedIconPath": "assets/images/tabbar/my_second.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "home",
+        "iconPath": "assets/images/tabbar/my_second.png",
+        "selectedIconPath": "assets/images/tabbar/my_second.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "test",
         "iconPath": "assets/images/tabbar/my_second.png",
         "selectedIconPath": "assets/images/tabbar/my_second.png"
       }

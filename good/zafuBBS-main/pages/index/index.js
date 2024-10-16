@@ -13,10 +13,8 @@ Page({
       '../../assets/images/rotation/2.jpg',
       '../../assets/images/rotation/tieba.jpg',
       '../../assets/images/rotation/tieba.jpg',
-      
     ],
     swiperCurrent: 0,
-
     sortList:[
       {
         icon: "../../assets/images/sort/news.png",
@@ -35,7 +33,8 @@ Page({
         sortid: 4,
         text:"失物招领"
       },
-    ]
+    ],
+    publishedTexts: [] // 用于存储在home页面显示的文本数组
   },
 
   /**
@@ -46,6 +45,7 @@ Page({
       navH: app.globalData.navHeight
     });
   },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -57,8 +57,11 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow() {
+    // 从全局获取发布的文本数组并更新本地的publishedTexts
+    this.setData({
+      publishedTexts: getApp().globalData.publishedTexts
+    });
   },
 
   /**

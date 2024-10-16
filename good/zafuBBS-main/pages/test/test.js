@@ -25,7 +25,7 @@ Page({
 
       // 跳转到 home 页面
       wx.switchTab({
-        url: '/pages/index/index'
+        url: '/pages/home/home'
       });
     } else {
       // 如果输入为空，给出提示

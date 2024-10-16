@@ -1,0 +1,15 @@
+/* home.wxss */
+.container {
+  padding: 20px;
+}
+
+.content {
+  font-size: 18px;
+  color: #333;
+}
+
+.separator {
+  margin: 10px 0;
+  height: 1px;
+  background-color: #ddd;
+}

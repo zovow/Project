@@ -35,7 +35,7 @@
     </view>
 
     <view class="mess_sort">
-        <!-- 实时留言 -->
+        <!-- 实时留言，考虑一下是否要留还是修改 -->
         <view class="leave-message">
             <image class="message-image" src="../../assets/images/sort/message.png"></image>
             <swiper class="swiper_message" circular vertical autoplay interval="5000" easing-function="easeInOutCubic" >
@@ -63,7 +63,6 @@
             <view class="sort-nav-item" wx:for="{{sortList}}"  wx:key="index">
                 <image class="sort-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
                 <text class="sort-nav-text">{{item.text}}</text>
-                <image class="down-selected"src="../../assets/images/sort/dwon.png"></image>
             </view>
         </scroll-view>   
     </view>
@@ -72,7 +71,7 @@
 
     <!-- 分类具体的内容 -->
     <view class="sort-content">
-        <block wx:for="{{1}}" wx:key="index" > 
+        <block wx:for="{{publishedTexts}}" wx:key="index" > 
             <view class="sort-content-item">
                 <view class="sort-content-top" >
                     <!-- 用户信息（头像、用户名等） -->
@@ -104,7 +103,7 @@
                 <!-- 帖子内容 -->
                 <view class="sort-content-middle">
                     <view class="acticle-text">
-                        <text>哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈</text>
+                        <text>{{item}}</text>
                     </view>
                     <view class="acticle-image">
                         <block wx:for="{{testImage}}" wx:key="index">
@@ -128,6 +127,8 @@
             </view>
         </block>
     </view>
+
+
 </view>
 
 
