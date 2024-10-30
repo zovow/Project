@@ -33,9 +33,8 @@
             </block>
         </view>
     </view>
-
     <view class="mess_sort">
-        <!-- 实时留言，考虑一下是否要留还是修改 -->
+     <!-- 实时留言，考虑一下是否要留还是修改 
         <view class="leave-message">
             <image class="message-image" src="../../assets/images/sort/message.png"></image>
             <swiper class="swiper_message" circular vertical autoplay interval="5000" easing-function="easeInOutCubic" >
@@ -48,14 +47,13 @@
                 </swiper-item>
                 <swiper-item class="swiper-item-message">
                     <view class="message">
-                        <!-- <image class="message-image" src="../../assets/images/sort/love-mood.png"></image> -->
                         <text class="message-name">wwwwww: </text>
                         <text class="message-content">哈哈哈</text>
                     </view>
                 </swiper-item>
             </swiper>
         </view>
-        
+      -->
 
 
         <!-- 分类标签 -->
@@ -67,74 +65,61 @@
         </scroll-view>   
     </view>
     
-
-
-    <!-- 分类具体的内容 -->
-    <view class="sort-content">
-        <block wx:for="{{publishedTexts}}" wx:key="index" > 
-            <view class="sort-content-item">
-                <view class="sort-content-top" >
-                    <!-- 用户信息（头像、用户名等） -->
-                    <view class="user-info">
-                        <view class="user-photo">
-                            <image src="../../assets/images/common/anonymous.png" mode="widthFix"></image>
-                        </view>
-                        <view class="user-detail">
-                            <view class="user-name">
-                                <text>匿名用户</text>
-                            </view>
-                            <view class="user-flag">
-                                <view class="article-sort">闲置交易</view>
-                                <view class="user-sex">小姐姐</view>
-                                <view class="user-level">Lv20</view>
-                            </view>
-                        </view>
-                        <view class="post-detail">
-                            <view class="handle">
-                                <image src="../../assets/images/common/more.png"></image>
-                            </view>
-                            <view class="post-time">
-                                <text>2020-08-28 08:30</text>
-                            </view>
-                            
-                        </view>
-                    </view>
-                </view>
-                <!-- 帖子内容 -->
-                <view class="sort-content-middle">
-                    <view class="acticle-text">
-                        <text>{{item}}</text>
-                    </view>
-                    <view class="acticle-image">
-                        <block wx:for="{{testImage}}" wx:key="index">
-                            <view class="show-image">
-                                <image src="{{item}}" mode="aspectfill"></image>
-                            </view>
-                        </block>
-                    </view>
-                </view>
-                <view class="sort-content-bottom">
-                    <view class="like">
-                        <image src="../../assets/images/article/unlike.png" class="bottom-img"></image>
-                        <text class="num">99</text>
-                    </view>
-                    <view class="comment">
-                        <image src="../../assets/images/article/comment.png" class="bottom-img"></image>
-                        <text class="num">99</text>
-                    </view>
-                    
-                </view>
+    <view class="content-list">
+    <block wx:for="{{publishedTexts}}" wx:key="index">
+      <view class="sort-content-item">
+        <view class="sort-content-top">
+          <!-- 用户信息（头像、用户名等） -->
+          <view class="user-info">
+            <view class="user-photo">
+              <image src="../../assets/images/common/anonymous.png" mode="widthFix"></image>
             </view>
-        </block>
-    </view>
+            <view class="user-detail">
+              <view class="user-name">
+                <text>匿名用户</text>
+              </view>
+              <view class="user-flag">
+                <view class="article-sort">闲置交易</view>
+                <view class="user-sex">小姐姐</view>
+                <view class="user-level">Lv20</view>
+              </view>
+            </view>
+            <view class="post-detail">
+              <view class="handle">
+                <image src="../../assets/images/common/more.png"></image>
+              </view>
+              <view class="post-time">
+                <text>{{item.timestamp}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
 
+        <!-- 帖子内容 -->
+        <view class="sort-content-middle">
+          <view class="acticle-text">
+            <text>{{item.text}}</text>
+          </view>
+          <view class="acticle-image">
+            <block wx:for="{{item.images}}" wx:key="index">
+              <view class="show-image">
+                <image src="{{item}}" mode="aspectfill"></image>
+              </view>
+            </block>
+          </view>
+        </view>
 
+        <view class="sort-content-bottom">
+          <view class="like">
+            <image src="../../assets/images/article/unlike.png" class="bottom-img"></image>
+            <text class="num">99</text>
+          </view>
+          <view class="comment">
+            <image src="../../assets/images/article/comment.png" class="bottom-img"></image>
+            <text class="num">99</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>
-
-
-
-
-
-
-
-

@@ -1,16 +1,22 @@
 /* pages/article/article.wxss */
+.title{
+  position: relative;
+  margin-top: 0rpx ;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .content-input {
   background-color: #ffffff;
-  margin-bottom: 0rpx;
-  position: relative;
-  padding: 18rpx 24rpx;
+  padding-top: 80rpx;
 }
 
 .text-input {
   height: 250rpx;
   width: 100%;
   min-height: 250rpx;
-  max-height: 400rpx;
+  max-height: 500rpx;
   z-index: 998;
   margin: 0rpx 8rpx;
  }
@@ -43,6 +49,13 @@
   justify-content: center;
   align-items: center;
  }
+
+ .image-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 
  .addImage image{
    width: 40%;
@@ -164,7 +177,7 @@
 }
 
 .sendArticle{
-  padding-top: 0rpx;
+  padding-top: 200rpx;
 }
 
 .confirm{

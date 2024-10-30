@@ -24,7 +24,7 @@
                     <image src="../../assets/images/common/more.png"></image>
                 </view>
                 <view class="post-time">
-                    <text>2020-08-28 08:30</text>
+                    <text>{{currentTime}}</text>
                 </view>
                 
             </view>
@@ -60,7 +60,7 @@
             <text class="action-desc">分享</text>
         </view>
     </view>
-  </view>
+  </view>c
   <!-- 帖子用户评论 -->
   <view class="comment">
       <view class="first-tag">
@@ -93,7 +93,7 @@
                       <image src="../../assets/images/common/more.png"></image>
                   </view>
                   <view class="post-time-mini">
-                      <text>2020-08-28 08:30</text>
+                      <text>{{currentTime}}</text>
                   </view>
                 </view>
             </view>

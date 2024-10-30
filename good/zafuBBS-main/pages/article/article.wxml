@@ -1,11 +1,15 @@
-<view class="content" style="margin-top:{{navH*4+40}}rpx">
+<view class="title" style="margin-top:{{navH*2.5+40}}rpx"> 
+    <h1>帖子发布</h1>
+</view>
+<view class="content" style="margin-top:{{5}}rpx">
+
   <view class="content-input">
     <view>
       <textarea class='text-input'
         autofocus
         bindinput="handleInputChange"  
         maxlength='200'
-        placeholder="请输入文字内容"
+        placeholder="请输入..."
         auto-height='{{true}}' 
         value="{{inputText}}"
       />
@@ -27,15 +31,21 @@
           bindtap="thisImage"
         />
       </view>
-      <view class="addImage" wx:if="{{imageList.length < 9}}">
-        <image bindtap="chooseImage"
-          src="../../assets/images/send/plus.png"
-        />
+      <view class="addImage" wx:if="{{imageList.length < 3}}">
+        <image bindtap="chooseImage" src="../../assets/images/send/plus.png"/>
+        <view class="image-thumbnails">
+          <block wx:for="{{imageList}}" wx:key="*this">
+            <view style="position: relative; display: inline-block;">
+              <image bindtap="deleteImage" 
+                    data-index="{{index}}" 
+                    style="position: absolute; top: -5px; right: -5px; width: 20px; height: 20px;" />
+            </view>
+          </block>
+        </view>
       </view>
     </view>
 
-    <view class="line"></view>
-    <view class="toUpload">
+    <view class="toUpload" wx:if="{{imageList.length < 3}}">
       <view class="uploadIcon">
         <image
           src="../../assets/images/send/photo.png"
@@ -53,7 +63,6 @@
       <span class="weui-agree__text">阅读并同意相关条款</span>
     </label>
     <a class="weui-btn weui-btn_primary confirm" bindtap="handlePublish">确认发布</a>
+    <a class="weui-btn weui-btn_default cancel" bindtap="handleCancel">取消发布</a>
   </view>
-  <a class="weui-btn weui-btn_default cancel" bindtap="handleCancel">取消发布</a>
-  
 </view>

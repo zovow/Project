@@ -7,6 +7,7 @@ Page({
    */
   data: {
     navH: 0,
+    currentTime: '', // 用于存储当前时间
     testImage:[
       'https://fishei.cn/static/pic/404.jpg',
       'https://fishei.cn/static/pic/500.jpg',
@@ -22,8 +23,26 @@ Page({
     this.setData({
       navH: app.globalData.navHeight
     });
+    this.updateCurrentTime(); // 页面加载时更新时间
   },
+  updateCurrentTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0'); // 月份从0开始
+    const day = now.getDate().toString().padStart(2, '0');
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
 
+    // 格式化为 "YYYY-MM-DD HH:mm"
+    const formattedTime = `${year}-${month}-${day} ${hours}:${minutes}`;
+    console.log("测试 console.log 是否正常"); // 打印简单的字符串
+
+    // 更新数据
+    this.setData({
+      currentTime: formattedTime
+    });
+  },
+  
   thisImage:function(e){
     let index = e.currentTarget.dataset.imageid;
     let list = this.data.testImage;
